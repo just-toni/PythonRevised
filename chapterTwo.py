@@ -77,7 +77,6 @@ def calculate_smallest(param1, param2, param3):
         smallest = param3
     return smallest
 
-
 def calculate_largest(param1, param2, param3):
     largest = param1
     if largest > param2:
