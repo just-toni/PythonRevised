@@ -26,7 +26,7 @@ if 2 % 10 == 0:
 else:
     print("2 is not a multiple of 10")
 
-# 2.8
+#2.8
 print("number \t square \t cube")
 numbers = [0, 1, 2, 3, 4, 5]
 
@@ -42,6 +42,52 @@ def cube_of_numbers(number1):
 
 
 for number in numbers:
-    print(number + "\t" + square_of_numbers(number) + "\t" + cube_of_numbers(number))
-    # print()
-    # print(cube_of_numbers(number))
+    print(number, "\t\t", square_of_numbers(number), "   \t\t", cube_of_numbers(number))
+
+# 2.9
+choice = str(input("Enter anything of your choice: "))
+print(ord(choice))
+
+# 2.10
+answer1 = int(input("Enter the first number: "))
+answer2 = int(input("Enter the second number: "))
+answer3 = int(input("Enter the third number: "))
+
+
+def calculate_sum(param1, param2, param3):
+    addition = param1 + param2 + param3
+    return addition
+
+
+def calculate_average(param1, param2, param3):
+    average = calculate_sum(param1, param2, param3) / 3
+    return average
+
+
+def calculate_product(param1, param2, param3):
+    product = param1 * param2 * param3
+    return product
+
+
+def calculate_smallest(param1, param2, param3):
+    smallest = param1
+    if smallest < param2:
+        smallest = param2
+    if smallest < param3:
+        smallest = param3
+    return smallest
+
+def calculate_largest(param1, param2, param3):
+    largest = param1
+    if largest > param2:
+        largest = param2
+    if largest > param3:
+        largest = param3
+    return largest
+
+
+print("Addition:", calculate_sum(answer1, answer2, answer3))
+print("Product:", calculate_product(answer1, answer2, answer3))
+print("Average:", calculate_average(answer1, answer2, answer3))
+print("Smallest:", calculate_smallest(answer1, answer2, answer3))
+print("Largest:", calculate_largest(answer1, answer2, answer3))
