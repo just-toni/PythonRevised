@@ -91,3 +91,16 @@ print("Product:", calculate_product(answer1, answer2, answer3))
 print("Average:", calculate_average(answer1, answer2, answer3))
 print("Smallest:", calculate_smallest(answer1, answer2, answer3))
 print("Largest:", calculate_largest(answer1, answer2, answer3))
+
+#2.11
+user_answer = int(input("Enter a five digit number: "))
+first_digit = user_answer % 10
+user_answer = user_answer // 10
+second_digit = user_answer % 10
+user_answer = user_answer // 10
+third_digit = user_answer % 10
+user_answer = user_answer // 10
+fourth_digit = user_answer % 10
+user_answer = user_answer // 10
+fifth_digit = user_answer % 10
+print(fifth_digit, "   ", fourth_digit, "   ", third_digit, "   ", second_digit, "   ", first_digit)
