@@ -104,3 +104,16 @@ fourth_digit = user_answer % 10
 user_answer = user_answer // 10
 fifth_digit = user_answer % 10
 print(fifth_digit, "   ", fourth_digit, "   ", third_digit, "   ", second_digit, "   ", first_digit)
+
+# 2.12
+
+principal = 1000
+rate = 0.07
+def calculate_investment_return(p, r, n):
+    investment = p * (1 + r)**n
+    return investment
+
+print("Money began with: ", principal)
+print("Money in 10 years: ", round(calculate_investment_return(principal, rate, 10), 2))
+print("Money in 20 years: ", round(calculate_investment_return(principal, rate, 20), 2))
+print("Money in 30 years: ", round(calculate_investment_return(principal, rate, 30), 2))
