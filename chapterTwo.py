@@ -26,7 +26,7 @@ if 2 % 10 == 0:
 else:
     print("2 is not a multiple of 10")
 
-#2.8
+# 2.8
 print("number \t square \t cube")
 numbers = [0, 1, 2, 3, 4, 5]
 
@@ -77,6 +77,7 @@ def calculate_smallest(param1, param2, param3):
         smallest = param3
     return smallest
 
+
 def calculate_largest(param1, param2, param3):
     largest = param1
     if largest > param2:
@@ -92,7 +93,7 @@ print("Average:", calculate_average(answer1, answer2, answer3))
 print("Smallest:", calculate_smallest(answer1, answer2, answer3))
 print("Largest:", calculate_largest(answer1, answer2, answer3))
 
-#2.11
+# 2.11
 user_answer = int(input("Enter a five digit number: "))
 first_digit = user_answer % 10
 user_answer = user_answer // 10
@@ -109,11 +110,38 @@ print(fifth_digit, "   ", fourth_digit, "   ", third_digit, "   ", second_digit,
 
 principal = 1000
 rate = 0.07
+
+
 def calculate_investment_return(p, r, n):
-    investment = p * (1 + r)**n
+    investment = p * (1 + r) ** n
     return investment
+
 
 print("Money began with: ", principal)
 print("Money in 10 years: ", round(calculate_investment_return(principal, rate, 10), 2))
 print("Money in 20 years: ", round(calculate_investment_return(principal, rate, 20), 2))
 print("Money in 30 years: ", round(calculate_investment_return(principal, rate, 30), 2))
+
+# 2.14
+
+user_age = int(input("Enter your age: "))
+
+
+def calculate_maximum_heart_rate(age):
+    max_heart_rate = 220 - age
+    return max_heart_rate
+
+
+def calculate_target_heart_rate1(age):
+    target_heart_rate1 = calculate_maximum_heart_rate(age) * 0.5
+    return target_heart_rate1
+
+
+def calculate_target_heart_rate2(age):
+    target_heart_rate2 = calculate_maximum_heart_rate(age) * 0.85
+    return target_heart_rate2
+
+
+print("Your maximum heart rate is:", calculate_maximum_heart_rate(user_age))
+print("Your target heart rate is between:", calculate_target_heart_rate1(user_age), "and",
+      calculate_target_heart_rate2(user_age))
